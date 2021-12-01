@@ -1,15 +1,14 @@
 const sumAll = function(...ints) {  //make integers into array
-    ints.sort(); 
-    const endInt = ints[1];   
+    ints.sort();
+    
+    if (typeof ints[0]!== 'number' || typeof ints[1] !== 'number') {
+        return 'ERROR';
+    } else if (ints[0] < 0 || ints[1] <0) {
+        return 'ERROR';
+    } 
+    const endInt = ints[1];
     for (let i = 0; i<endInt-2; ++i) {
-        if (ints[i] < 0) {
-            return 'ERROR';
-        } 
-        //else if () {
-        //    return 'ERROR';
-        //}
-         else {ints.splice(i+1,0,ints[i]+1)
-        }
+        ints.splice(i+1,0,ints[i]+1)
     }
         //make loop to add numbers between integers to array
     let sum = ints.reduce(findSum);
