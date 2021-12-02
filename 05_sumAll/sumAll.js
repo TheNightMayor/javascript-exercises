@@ -12,8 +12,8 @@ const sumAll = function(...ints) {  //make integers into array
     }
         //make loop to add numbers between integers to array
     let sum = ints.reduce(findSum);
-        function findSum(total, value) {
-           return total + value;
+    function findSum(total, value) {
+        return total + value;
         }//add all numbers in array
     
     return sum //return sum
